@@ -47,7 +47,6 @@
             gap: 20px;
             margin-bottom: 20px;
             padding-bottom: 20px;
-            border-bottom: 1px solid abs.$rosa-neon;
             .titulo{
                 h2{
                     font-size: 25px;
@@ -57,42 +56,164 @@
             .proyectos{
                 display: flex;
                 flex-direction: column;
+                gap: 10px;
+                padding-bottom: 20px;
+                border-bottom: 1px solid abs.$rosa-neon;
                 .stellar-blade{
-                    img{
-                        width: 100%;
-                        margin-bottom: 10px;
-                    }
-                    h3{
-                        font-size: 20px;
-                        font-weight: bold;
-                        margin-bottom: 10px;
-                    }
-                    .tecnologias{
-                        display: flex;
-                        flex-direction: column;
-                        margin-bottom: 10px;
-                        .upper{
-                            display: flex;
-                            justify-content: space-between;
+                    border-bottom: 1px dotted abs.$azul-aguamarina;
+                    padding-bottom: 10px;
+                    .vista-movil{
+                        img{
+                            width: 100%;
+                            margin-bottom: 10px;
                         }
-                        .lower{
-                            display: flex;
-                            justify-content: space-between;
+                        h3{
+                            font-size: 20px;
+                            font-weight: bold;
+                            margin-bottom: 10px;
                         }
-                    }
-                    .ver-web-codigo-movil{
-                        nav{
-                            ul{
+                        .tecnologias{
+                            display: flex;
+                            flex-direction: column;
+                            margin-bottom: 10px;
+                            .upper{
                                 display: flex;
-                                gap: 20px;
-                                a{
-                                    text-decoration: none;
-                                    text-shadow: 0px 0px 2px abs.$azul-celeste;
+                                justify-content: space-between;
+                            }
+                            .lower{
+                                display: flex;
+                                justify-content: space-between;
+                            }
+                        }
+                        .ver-web-codigo-movil{
+                            nav{
+                                ul{
+                                    display: flex;
+                                    gap: 20px;
+                                    a{
+                                        text-decoration: none;
+                                        text-shadow: 0px 0px 2px abs.$azul-celeste;
+                                    }
                                 }
                             }
                         }
                         @include abs.breakpoint(desktop){
                             display: none;
+                        }
+                    }
+                    .vista-desktop{
+                        display: none;
+                        @include abs.breakpoint(desktop){
+                            display: block;
+                            position: relative;
+                            width: 100%;
+                            height: 100%;
+                            transform-style: preserve-3d;
+                            transition: transform 0.6s;
+                            .parte-frontal{
+                                display: flex;
+                                align-items: center;
+                                justify-content: center;
+                                img{
+                                    width: 100%;
+                                    height: 100%;
+                                }
+                            }
+                            .parte-trasera{
+                                position: absolute;
+                                top: 0;
+                                width: 100%;
+                                height: 100%;
+                                backface-visibility: hidden;
+                                overflow: hidden;
+                                background-color: abs.$gris-azulado;
+                                transform: rotateY(180deg);
+                                display: flex;
+                                flex-direction: column;
+                                align-items: center;
+                                justify-content: center;
+                            }
+                        }
+                    }
+                    @include abs.breakpoint(desktop){
+                        &:hover{
+                            .vista-desktop{
+                                transform: rotateY(180deg);
+                            }
+                        }
+                    }
+                }
+                .game-boy{
+                    .vista-movil{
+                        img{
+                            width: 100%;
+                            margin-bottom: 10px;
+                        }
+                        h3{
+                            font-size: 20px;
+                            font-weight: bold;
+                            margin-bottom: 10px;
+                        }
+                        .tecnologias{
+                            display: flex;
+                            justify-content: space-between;
+                            margin-bottom: 10px;
+                        }
+                        .ver-web-codigo-movil{
+                            nav{
+                                ul{
+                                    display: flex;
+                                    gap: 20px;
+                                    a{
+                                        text-decoration: none;
+                                        text-shadow: 0px 0px 2px abs.$azul-celeste;
+                                    }
+                                }
+                            }
+                        }
+                        @include abs.breakpoint(desktop){
+                            display: none;
+                        }
+                    }
+                    .vista-desktop{
+                        display: none;
+                        @include abs.breakpoint(desktop){
+                            display: block;
+                            position: relative;
+                            width: 100%;
+                            height: 100%;
+                            transform-style: preserve-3d;
+                            transition: transform 0.6s;
+                            .parte-frontal{
+                                display: flex;
+                                align-items: center;
+                                justify-content: center;
+                                img{
+                                    width: 100%;
+                                    height: 100%;
+                                }
+                            }
+                            .parte-trasera{
+                                position: absolute;
+                                top: 0;
+                                width: 100%;
+                                height: 100%;
+                                backface-visibility: hidden;
+                                overflow: hidden;
+                                background-color: abs.$gris-azulado;
+                                transform: rotateY(180deg);
+                                display: flex;
+                                flex-direction: column;
+                                align-items: center;
+                                justify-content: center;
+                            }
+                        }
+                    }
+                    @include abs.breakpoint(desktop){
+                        &:hover{
+                            .vista-desktop{
+                                transform: rotateY(180deg);
+                            }
                         }
                     }
                 }

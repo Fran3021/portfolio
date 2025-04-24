@@ -149,7 +149,6 @@
   gap: 20px;
   margin-bottom: 20px;
   padding-bottom: 20px;
-  border-bottom: 1px solid #FF61A6;
 }
 .main-principal .container-main-principal .titulo-proyectos .titulo h2 {
   font-size: 25px;
@@ -158,40 +157,156 @@
 .main-principal .container-main-principal .titulo-proyectos .proyectos {
   display: flex;
   flex-direction: column;
+  gap: 10px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #FF61A6;
 }
-.main-principal .container-main-principal .titulo-proyectos .proyectos .stellar-blade img {
+.main-principal .container-main-principal .titulo-proyectos .proyectos .stellar-blade {
+  border-bottom: 1px dotted #4ED6CB;
+  padding-bottom: 10px;
+}
+.main-principal .container-main-principal .titulo-proyectos .proyectos .stellar-blade .vista-movil img {
   width: 100%;
   margin-bottom: 10px;
 }
-.main-principal .container-main-principal .titulo-proyectos .proyectos .stellar-blade h3 {
+.main-principal .container-main-principal .titulo-proyectos .proyectos .stellar-blade .vista-movil h3 {
   font-size: 20px;
   font-weight: bold;
   margin-bottom: 10px;
 }
-.main-principal .container-main-principal .titulo-proyectos .proyectos .stellar-blade .tecnologias {
+.main-principal .container-main-principal .titulo-proyectos .proyectos .stellar-blade .vista-movil .tecnologias {
   display: flex;
   flex-direction: column;
   margin-bottom: 10px;
 }
-.main-principal .container-main-principal .titulo-proyectos .proyectos .stellar-blade .tecnologias .upper {
+.main-principal .container-main-principal .titulo-proyectos .proyectos .stellar-blade .vista-movil .tecnologias .upper {
   display: flex;
   justify-content: space-between;
 }
-.main-principal .container-main-principal .titulo-proyectos .proyectos .stellar-blade .tecnologias .lower {
+.main-principal .container-main-principal .titulo-proyectos .proyectos .stellar-blade .vista-movil .tecnologias .lower {
   display: flex;
   justify-content: space-between;
 }
-.main-principal .container-main-principal .titulo-proyectos .proyectos .stellar-blade .ver-web-codigo-movil nav ul {
+.main-principal .container-main-principal .titulo-proyectos .proyectos .stellar-blade .vista-movil .ver-web-codigo-movil nav ul {
   display: flex;
   gap: 20px;
 }
-.main-principal .container-main-principal .titulo-proyectos .proyectos .stellar-blade .ver-web-codigo-movil nav ul a {
+.main-principal .container-main-principal .titulo-proyectos .proyectos .stellar-blade .vista-movil .ver-web-codigo-movil nav ul a {
   text-decoration: none;
   text-shadow: 0px 0px 2px #B3CFF2;
 }
 @media (min-width: 1280px) {
-  .main-principal .container-main-principal .titulo-proyectos .proyectos .stellar-blade .ver-web-codigo-movil {
+  .main-principal .container-main-principal .titulo-proyectos .proyectos .stellar-blade .vista-movil {
     display: none;
+  }
+}
+.main-principal .container-main-principal .titulo-proyectos .proyectos .stellar-blade .vista-desktop {
+  display: none;
+}
+@media (min-width: 1280px) {
+  .main-principal .container-main-principal .titulo-proyectos .proyectos .stellar-blade .vista-desktop {
+    display: block;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transform-style: preserve-3d;
+    transition: transform 0.6s;
+  }
+  .main-principal .container-main-principal .titulo-proyectos .proyectos .stellar-blade .vista-desktop .parte-frontal {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .main-principal .container-main-principal .titulo-proyectos .proyectos .stellar-blade .vista-desktop .parte-frontal img {
+    width: 100%;
+    height: 100%;
+  }
+  .main-principal .container-main-principal .titulo-proyectos .proyectos .stellar-blade .vista-desktop .parte-trasera {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    overflow: hidden;
+    background-color: #121829;
+    transform: rotateY(180deg);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+}
+@media (min-width: 1280px) {
+  .main-principal .container-main-principal .titulo-proyectos .proyectos .stellar-blade:hover .vista-desktop {
+    transform: rotateY(180deg);
+  }
+}
+.main-principal .container-main-principal .titulo-proyectos .proyectos .game-boy .vista-movil img {
+  width: 100%;
+  margin-bottom: 10px;
+}
+.main-principal .container-main-principal .titulo-proyectos .proyectos .game-boy .vista-movil h3 {
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+.main-principal .container-main-principal .titulo-proyectos .proyectos .game-boy .vista-movil .tecnologias {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+.main-principal .container-main-principal .titulo-proyectos .proyectos .game-boy .vista-movil .ver-web-codigo-movil nav ul {
+  display: flex;
+  gap: 20px;
+}
+.main-principal .container-main-principal .titulo-proyectos .proyectos .game-boy .vista-movil .ver-web-codigo-movil nav ul a {
+  text-decoration: none;
+  text-shadow: 0px 0px 2px #B3CFF2;
+}
+@media (min-width: 1280px) {
+  .main-principal .container-main-principal .titulo-proyectos .proyectos .game-boy .vista-movil {
+    display: none;
+  }
+}
+.main-principal .container-main-principal .titulo-proyectos .proyectos .game-boy .vista-desktop {
+  display: none;
+}
+@media (min-width: 1280px) {
+  .main-principal .container-main-principal .titulo-proyectos .proyectos .game-boy .vista-desktop {
+    display: block;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transform-style: preserve-3d;
+    transition: transform 0.6s;
+  }
+  .main-principal .container-main-principal .titulo-proyectos .proyectos .game-boy .vista-desktop .parte-frontal {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .main-principal .container-main-principal .titulo-proyectos .proyectos .game-boy .vista-desktop .parte-frontal img {
+    width: 100%;
+    height: 100%;
+  }
+  .main-principal .container-main-principal .titulo-proyectos .proyectos .game-boy .vista-desktop .parte-trasera {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    overflow: hidden;
+    background-color: #121829;
+    transform: rotateY(180deg);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+}
+@media (min-width: 1280px) {
+  .main-principal .container-main-principal .titulo-proyectos .proyectos .game-boy:hover .vista-desktop {
+    transform: rotateY(180deg);
   }
 }
 
