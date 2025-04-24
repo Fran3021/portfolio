@@ -35,8 +35,8 @@ export default async function handler(req, res) {
     const { name, email, message } = req.body;
 
     const msg = {
-      to: "contacto@frangarciadev.com", // tu correo con dominio propio
-      from: email,
+      to: "contacto@frangarciadev.com", // 
+      from: "contacto@frangarciadev.com",
       subject: `Nuevo mensaje de ${name}`,
       text: message,
       html: `<strong>De:</strong> ${name} (${email})<br/><strong>Mensaje:</strong><br/>${message}`,
