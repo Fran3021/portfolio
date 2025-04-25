@@ -43,23 +43,40 @@
   <div id="tsparticles"></div>
   <header class="header-principal">
     <div class="container-header-principal">
-      <h1 class="titulo">Francisco García</h1>
-      <h2>Desarrollador web</h2>
+      <h1 class="titulo">¡Hola! Soy Francisco García</h1>
+      <h2>Junior Web Developer</h2>
       <div class="container-avatar-sobremi">
-        <img class="avatar" src="src/img/avatar.png" alt="avatar">
-        <div class="sobremi">
-          <h2>SOBRE MI</h2>
-          <p>Soy desarrollador web con una gran pasión por lo que hago. Disfruto creando soluciones para problemas reales, y me encanta ver cómo una idea puede transformarse en algo funcional, con identidad propia, y listo para mostrarse al mundo.</p>
-          <p>Me considero una persona adaptable, resolutiva y con buena capacidad para trabajar en equipo. Creo firmemente que la programación es una herramienta poderosa para mejorar la vida de las personas, y me motiva aportar a proyectos con ese propósito.</p>
+        <div class="avatar">
+          <img class="image-avatar" src="src/img/avatar.png" alt="avatar">
+        </div>
+        <div class="parrafos-sobremi-vista-desktop">
           <p>Actualmente estoy en búsqueda de una oportunidad como desarrollador web, con muchas ganas de crecer profesionalmente y aportar valor a una empresa.</p>
           <p>Soy curioso por naturaleza y nunca dejo de aprender, especialmente en un campo tan dinámico como el desarrollo web.</p>
           <p>Si deseas ponerte en contacto conmigo, no dudes en escribirme a través de mis redes sociales.</p>
           <nav class="redes-sociales">
             <ul>
               <li><a href="https://github.com/Fran3021"><i class="bi bi-github"></i></a></li>
+              <li><a href="src/img/curriculum_vitae_21-04-2025.pdf">Curriculum</a></li>
               <li><a href="https://www.linkedin.com/in/fran-garc%C3%ADa-0314642b9/"><i class="bi bi-linkedin"></i></a></li>
             </ul>
           </nav>
+        </div>
+        <div class="sobremi">
+          <h2>SOBRE MI</h2>
+          <p>Soy una persona con una gran pasión por lo que hago. Disfruto creando soluciones para problemas reales, y me encanta ver cómo una idea puede transformarse en algo funcional, con identidad propia, y listo para mostrarse al mundo.</p>
+          <p>Me considero una persona adaptable, resolutiva y con buena capacidad para trabajar en equipo. Creo firmemente que la programación es una herramienta poderosa para mejorar la vida de las personas, y me motiva aportar a proyectos con ese propósito.</p>
+          <div class="parrafos-sobremi-vista-movil">
+            <p>Actualmente estoy en búsqueda de una oportunidad como desarrollador web, con muchas ganas de crecer profesionalmente y aportar valor a una empresa.</p>
+            <p>Soy curioso por naturaleza y nunca dejo de aprender, especialmente en un campo tan dinámico como el desarrollo web.</p>
+            <p>Si deseas ponerte en contacto conmigo, no dudes en escribirme a través de mis redes sociales.</p>
+            <nav class="redes-sociales">
+              <ul>
+                <li><a href="https://github.com/Fran3021"><i class="bi bi-github"></i></a></li>
+                <li><a href="src/img/curriculum_vitae_21-04-2025.pdf">Curriculum</a></li>
+                <li><a href="https://www.linkedin.com/in/fran-garc%C3%ADa-0314642b9/"><i class="bi bi-linkedin"></i></a></li>
+              </ul>
+            </nav>
+          </div>
         </div>
       </div>
     </div>
@@ -172,10 +189,11 @@
         </div>
         <div class="formulario-contacto">
           <p>Si desea ponerse en contacto conmigo, no dude en enviarme un mensaje a través del siguiente formulario. Le responderé lo antes posible. ¡Muchas gracias!</p>
-          <form id="contactForm">
-            <input type="text" name="name" placeholder="Tu nombre" required>
-            <input type="email" name="email" placeholder="Tu correo" required>
-            <textarea name="message" placeholder="Tu mensaje" required></textarea>
+          <form class="formulario" action="https://formsubmit.co/contacto@frangarciadev.com" method="POST">
+            <input type="hidden" name="_captcha" value="false">
+            <input type="text" name="name" placeholder="Nombre" required>
+            <input type="email" name="email" placeholder="Correo" required>
+            <textarea name="message" placeholder="Mensaje" required></textarea>
             <button type="submit">Enviar</button>
           </form>
         </div>
@@ -185,7 +203,12 @@
 
   <footer class="footer-principal">
     <div class="container-footer-principal">
-
+      <h2>FRANCISCO GARCIA</h2>
+      <ul>
+        <li><a href="https://github.com/Fran3021"><i class="bi bi-github"></i></a></li>
+        <li><a href="https://www.linkedin.com/in/fran-garc%C3%ADa-0314642b9/"><i class="bi bi-linkedin"></i></a></li>
+      </ul>
+    </nav>
     </div>
   </footer>
 </body>

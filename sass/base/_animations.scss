@@ -1,1 +1,14 @@
-// all keyframes 
+@use '../abstracts/abstracts' as abs;
+
+
+@keyframes glow {
+    0%, 100% { text-shadow: 0 0 5px abs.$azul-celeste, 0 0 10px abs.$azul-celeste, 0 0 20px abs.$azul-celeste; }
+    50% { text-shadow: 0 0 10px abs.$azul-celeste, 0 0 20px abs.$azul-celeste, 0 0 30px abs.$azul-celeste; }
+  }
+
+  @keyframes fadeOut {
+    to {
+      opacity: 0;
+      visibility: hidden;
+    }
+  }

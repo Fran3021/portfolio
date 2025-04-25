@@ -6,18 +6,39 @@
 .header-principal{
     padding-top: 20px;
     margin-bottom: 40px;
+    @include abs.breakpoint(desktop){
+        padding-top: 40px;
+    }
     .container-header-principal{
         border-bottom: 1px solid abs.$rosa-neon;
         padding-bottom: 20px;
+        @include abs.breakpoint(desktop){
+            padding-bottom:  70px;
+        }
         .titulo{
             font-size: 35px;
             text-align: center;
+            @include abs.breakpoint(desktop){
+                font-size: 45px;
+                margin-bottom: 20px;
+            }
+            @include abs.breakpoint(desktopxl){
+                font-size: 55px;
+            }
         }
         h2{
             font-size: 25px;
             text-align: center;
             margin-bottom: 25px;
             font-weight: bold;
+            @include abs.breakpoint(desktop){
+                font-size: 35px;
+                margin-bottom: 75px;
+                animation: glow 2s infinite linear;
+            }
+            @include abs.breakpoint(desktopxl){
+                font-size: 45px;
+            }
         }
         .container-avatar-sobremi{
             display: flex;
@@ -25,10 +46,73 @@
             justify-content: center;
             align-items: center;
             gap: 20px;
+            @include abs.breakpoint(desktop){
+                display: grid;
+                grid-template-columns: 0.4fr 1fr;
+                grid-template-rows: 0.5fr 0.5fr;
+                row-gap: 20px;
+            }
             .avatar{
-                width: 70%;
-                border-radius: 10px;
-                border: 1px solid abs.$azul-electrico;
+                width: 100%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                .image-avatar{
+                    width: 70%;
+                    border-radius: 10px;
+                    border: 1px solid abs.$azul-electrico;
+                    @include abs.breakpoint(tablet){
+                        width: 50%;
+                    }
+                    @include abs.breakpoint(desktop){
+                        grid-column: 1 / span 1;
+                        grid-row: 1 / span 1;
+                        width: 100%;
+                    }
+                }
+            }
+            .parrafos-sobremi-vista-desktop{
+                display: none;
+                @include abs.breakpoint(desktop){
+                    display: block;
+                    grid-column: 1 / span 2;
+                    grid-row: 2 / span 1;
+                    p{
+                        font-size: 18px;
+                        color: abs.$azul-celeste;
+                        font-weight: 500;
+                        margin-bottom: 20px;
+                        @include abs.breakpoint(desktopxl){
+                            font-size: 22px;
+                        }
+                    }
+                    .redes-sociales{
+                        width: 100%;
+                        ul{
+                            display: flex;
+                            justify-content: space-around;
+                            align-items: center;
+                            a{
+                                text-decoration: none;
+                                color: abs.$azul-electrico;
+                                font-size: 18px;
+                                &:hover{
+                                    color: abs.$blanco;
+                                }
+                                @include abs.breakpoint(desktopxl){
+                                    font-size: 20px;
+                                }
+                            }
+                            i{
+                                color: abs.$azul-electrico;
+                                font-size: 30px;
+                                &:hover{
+                                    color: abs.$blanco;
+                                }
+                            }
+                        }
+                    }
+                }
             }
             .sobremi{
                 display: flex;
@@ -36,24 +120,48 @@
                 justify-content: center;
                 align-items: center;
                 gap: 10px;
+                @include abs.breakpoint(desktop){
+                    grid-column: 2 / span 1;
+                    grid-row: 1 / span 1;
+                    gap: 20px;
+                }
                 h2{
                     font-size: 25px;
                     margin-bottom: 25px;
                     font-weight: bold;
+                    @include abs.breakpoint(tablet){
+                        display: none;
+                    }
                 }
                 p{
                     font-size: 15px;
                     color: abs.$azul-celeste;
                     font-weight: 500;
+                    @include abs.breakpoint(desktop){
+                        font-size: 18px;
+                    }
+                    @include abs.breakpoint(desktopxl){
+                        font-size: 22px;
+                    }
                 }
-                .redes-sociales{
-                    width: 100%;
-                    ul{
-                        display: flex;
-                        justify-content: space-around;
-                        i{
-                            color: abs.$azul-electrico;
-                            font-size: 30px;
+                .parrafos-sobremi-vista-movil{
+                    @include abs.breakpoint(desktop){
+                        display: none;
+                    }
+                    .redes-sociales{
+                        width: 100%;
+                        ul{
+                            display: flex;
+                            justify-content: space-around;
+                            align-items: center;
+                            a{
+                                text-decoration: none;
+                                color: abs.$azul-electrico;
+                            }
+                            i{
+                                color: abs.$azul-electrico;
+                                font-size: 30px;
+                            }
                         }
                     }
                 }

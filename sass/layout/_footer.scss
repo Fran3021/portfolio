@@ -1,3 +1,40 @@
 @use '../abstracts/abstracts' as abs;
 @use '../base/base' as base;
 @use '../components/components' as comp;
+
+
+.footer-principal{
+    padding-bottom: 20px;
+    @include abs.breakpoint(desktop){
+        padding-bottom: 40px;
+    }
+    .container-footer-principal{
+        display: flex;
+        justify-content: space-between;
+        h2{
+            font-size: 15px;
+            @include abs.breakpoint(desktop){
+                font-size: 25px;
+            }
+            @include abs.breakpoint(desktopxl){
+                font-size: 35px;
+            }
+        }
+        ul{
+            display: flex;
+            gap: 30px;
+            @include abs.breakpoint(desktopxl){
+                gap: 50px;
+            }
+            i{
+                color: abs.$azul-electrico;
+                @include abs.breakpoint(desktop){
+                    font-size: 28px;
+                    &:hover{
+                        color: abs.$blanco;
+                    }
+                }
+            }
+        }
+    }
+}

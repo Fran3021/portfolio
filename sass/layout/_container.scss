@@ -4,15 +4,54 @@
 
 .container-header-principal{
     max-width: 90%;
-    margin: auto;
+    margin-left: auto;
+    margin-right: auto;
+    @include abs.breakpoint(tablet){
+        width: 100%;
+        max-width: 650px;
+    }
+    @include abs.breakpoint(desktop){
+        width: 100%;
+        max-width: 800px;
+    }
+    @include abs.breakpoint(desktopxl){
+        width: 100%;
+        max-width: 900px;
+    }
 }
 
 .container-main-principal{
     max-width: 90%;
-    margin: auto;
+    margin-left: auto;
+    margin-right: auto;
+    @include abs.breakpoint(tablet){
+        width: 100%;
+        max-width: 650px;
+    }
+    @include abs.breakpoint(desktop){
+        width: 100%;
+        max-width: 800px;
+    }
+    @include abs.breakpoint(desktopxl){
+        width: 100%;
+        max-width: 900px;
+    }
 }
 
 .container-footer-principal{
     max-width: 90%;
-    margin: auto;
+    margin-left: auto;
+    margin-right: auto;
+    @include abs.breakpoint(tablet){
+        width: 100%;
+        max-width: 650px;
+    }
+    @include abs.breakpoint(desktop){
+        width: 100%;
+        max-width: 800px;
+    }
+    @include abs.breakpoint(desktopxl){
+        width: 100%;
+        max-width: 900px;
+    }
 }
