@@ -4,10 +4,59 @@
 
 
 .header-principal{
-    padding-top: 20px;
     margin-bottom: 40px;
+    padding-top: 70px;
     @include abs.breakpoint(desktop){
-        padding-top: 40px;
+        padding-top: 140px;
+    }
+    .menu-principal{
+        background-color: abs.$gris-azulado;
+        position: fixed;
+        opacity: 0.8;
+        top: 0;
+        width: 100%;
+        ul{
+            max-width: 90%;
+            margin-left: auto;
+            margin-right: auto;
+            display: flex;
+            padding-top: 10px;
+            padding-bottom: 10px;
+            justify-content: space-between;
+            @include abs.breakpoint(tablet){
+                width: 100%;
+                max-width: 650px;
+                padding-top: 20px;
+                padding-bottom: 20px;
+            }
+            @include abs.breakpoint(desktop){
+                width: 100%;
+                max-width: 800px;
+                padding-top: 30px;
+                padding-bottom: 30px;
+            }
+            @include abs.breakpoint(desktopxl){
+                width: 100%;
+                max-width: 900px;
+            }
+            a{
+                text-decoration: none;
+                color: abs.$azul-electrico;
+                font-size: 15px;
+                @include abs.breakpoint(tablet){
+                    font-size: 17px;
+                }
+                @include abs.breakpoint(desktop){
+                    &:hover{
+                        color: abs.$rosa-neon;
+                        text-shadow: 2px 2px 7px abs.$azul-electrico;
+                    }
+                }
+                @include abs.breakpoint(desktopxl){
+                    font-size: 20px;
+                }
+            }
+        }
     }
     .container-header-principal{
         border-bottom: 1px solid abs.$rosa-neon;
@@ -58,11 +107,11 @@
                 justify-content: center;
                 align-items: center;
                 .image-avatar{
-                    width: 70%;
+                    width: 150px;
                     border-radius: 10px;
                     border: 1px solid abs.$azul-electrico;
                     @include abs.breakpoint(tablet){
-                        width: 50%;
+                        width: 200px;
                     }
                     @include abs.breakpoint(desktop){
                         grid-column: 1 / span 1;
@@ -145,6 +194,9 @@
                     }
                 }
                 .parrafos-sobremi-vista-movil{
+                    p{
+                        margin-bottom: 10px;
+                    }
                     @include abs.breakpoint(desktop){
                         display: none;
                     }

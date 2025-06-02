@@ -11,13 +11,21 @@
     .container-footer-principal{
         display: flex;
         justify-content: space-between;
-        h2{
-            font-size: 15px;
-            @include abs.breakpoint(desktop){
-                font-size: 25px;
-            }
-            @include abs.breakpoint(desktopxl){
-                font-size: 35px;
+        align-items: center;
+        .all-rights{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            p{
+                font-size: 10px;
+                color: abs.$azul-electrico;
+                @include abs.breakpoint(tablet){
+                    font-size: 15px;
+                }
+                @include abs.breakpoint(desktopxl){
+                    font-size: 20px;
+                }
             }
         }
         ul{

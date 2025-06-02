@@ -46,9 +46,16 @@
 <body>
   <div id="tsparticles"></div>
   <header class="header-principal">
+    <nav class="menu-principal">
+      <ul>
+        <li><a href="#habilidades">Habilidades</a></li>
+        <li><a href="#proyectos-id">Proyectos</a></li>
+        <li><a href="#contacto">Contacto</a></li>
+      </ul>
+    </nav>
     <div class="container-header-principal">
       <h1 class="titulo">¡Hola! Soy Francisco García</h1>
-      <h2>Junior Web Developer</h2>
+      <h2>Desarrollador Web</h2>
       <div class="container-avatar-sobremi">
         <div class="avatar">
           <img class="image-avatar" src="/src/img/avatar.png" alt="avatar">
@@ -60,14 +67,13 @@
           <nav class="redes-sociales">
             <ul>
               <li><a href="https://github.com/Fran3021"><i class="bi bi-github"></i></a></li>
-              <li><a href="/src/img/curriculum-fran-actualizado.pdf">Curriculum</a></li>
               <li><a href="https://www.linkedin.com/in/fran-garc%C3%ADa-0314642b9/"><i class="bi bi-linkedin"></i></a></li>
             </ul>
           </nav>
         </div>
         <div class="sobremi">
           <h2>SOBRE MI</h2>
-          <p>Soy una persona con una gran pasión por lo que hago. Disfruto creando soluciones para problemas reales, y me encanta ver cómo una idea puede transformarse en algo funcional, con identidad propia, y listo para mostrarse al mundo.</p>
+          <p>Soy Francisco Garcia. Desarrollador web, nacido en Córdoba ( España ). Me considero una persona con una gran pasión por lo que hago. Disfruto creando soluciones para problemas reales, y me encanta ver cómo una idea puede transformarse en algo funcional, con identidad propia, y listo para mostrarse al mundo.</p>
           <p>Me considero una persona adaptable, resolutiva y con buena capacidad para trabajar en equipo. Creo firmemente que la programación es una herramienta poderosa para mejorar la vida de las personas, y me motiva aportar a proyectos con ese propósito.</p>
           <div class="parrafos-sobremi-vista-movil">
             <p>Actualmente estoy en búsqueda de una oportunidad como desarrollador web, con muchas ganas de crecer profesionalmente y aportar valor a una empresa.</p>
@@ -76,7 +82,6 @@
             <nav class="redes-sociales">
               <ul>
                 <li><a href="https://github.com/Fran3021"><i class="bi bi-github"></i></a></li>
-                <li><a href="/src/img/curriculum_vitae_21-04-2025.pdf">Curriculum</a></li>
                 <li><a href="https://www.linkedin.com/in/fran-garc%C3%ADa-0314642b9/"><i class="bi bi-linkedin"></i></a></li>
               </ul>
             </nav>
@@ -88,7 +93,7 @@
 
   <main class="main-principal">
     <div class="container-main-principal">
-      <div class="titulo-habilidades">
+      <div class="titulo-habilidades" id="habilidades">
         <div class="titulo">
           <h2>HABILIDADES</h2>
         </div>
@@ -98,6 +103,7 @@
             <h3>CSS</h3>
             <h3>Sass</h3>
             <h3>JavaScript</h3>
+            <h3>Wordpress</h3>
           </div>
           <div class="habilidades-right">
             <h3>Python</h3>
@@ -107,7 +113,7 @@
           </div>
         </div>
       </div>
-      <div class="titulo-proyectos">
+      <div class="titulo-proyectos" id="proyectos-id">
         <div class="titulo">
           <h2>PROYECTOS</h2>
         </div>
@@ -154,7 +160,7 @@
           </article>
           <article class="game-boy">
             <div class="vista-movil">
-              <img src="/src/img/imagen-gameboy.png" alt="proyecto-game-boy">
+              <img src="/src/img/game-boy.png" alt="proyecto-game-boy">
               <h3>GameBoy Edición Pikachu Interactiva</h3>
               <div class="tecnologias">
                   <p>HTML</p>
@@ -172,7 +178,7 @@
             </div>
             <div class="vista-desktop">
               <div class="parte-frontal">
-                <img src="src/img/imagen-gameboy.png" alt="proyecto-game-boy">
+                <img src="src/img/game-boy.png" alt="proyecto-game-boy">
               </div>
               <div class="parte-trasera">
                 <p>Game Boy Color edición Pikachu, que muestra datos de Pokémon en pantalla mediante conexión a la PokeAPI. Permite consultar información en tiempo real sobre diferentes Pokémon, simulando la interfaz clásica de la consola</p>
@@ -185,9 +191,39 @@
               </div>
             </div>
           </article>
+          <article class="cafeteria-el-rocio">
+            <div class="vista-movil">
+              <img src="/src/img/cafeteria-el-rocio.png" alt="cafeteria-el-rocio">
+              <h3>Web Cafeteria El Rocío</h3>
+              <div class="tecnologias">
+                  <p>WordPress</p>
+                  <p>Elementor</p>
+              </div>
+              <div class="ver-web-codigo-movil">
+                <nav>
+                  <ul>
+                    <li><a href="https://cafeteriaelrocio.frangarciadev.com/">Ver proyecto</a></li>
+                  </ul>
+                </nav>
+              </div>
+            </div>
+            <div class="vista-desktop">
+              <div class="parte-frontal">
+                <img src="src/img/cafeteria-el-rocio.png" alt="cafeteria-el-rocio">
+              </div>
+              <div class="parte-trasera">
+                <p>Web realizada con WordPress y Elementor, donde se simula una cafetería. En el sitio se pueden ver algunos productos del menú, realizar reservas, contactar con la cafetería y consultar una breve información sobre ella. La página está totalmente adaptada a diferentes resoluciones.</p>
+                <nav>
+                  <ul>
+                    <li><a href="https://cafeteriaelrocio.frangarciadev.com/">Ver proyecto</a></li>
+                  </ul>
+                </nav>
+              </div>
+            </div>
+          </article>
         </div>
       </div>
-      <div class="titulo-contacto">
+      <div class="titulo-contacto" id="contacto">
         <div class="titulo">
           <h2>CONTACTO</h2>
         </div>
@@ -207,7 +243,10 @@
 
   <footer class="footer-principal">
     <div class="container-footer-principal">
-      <h2>FRANCISCO GARCIA</h2>
+      <div class="all-rights">
+        <p>Copyright © 2025 Fran García Dev</p>
+        <p>Todos los derechos reservados.</p>
+      </div>
       <ul>
         <li><a href="https://github.com/Fran3021"><i class="bi bi-github"></i></a></li>
         <li><a href="https://www.linkedin.com/in/fran-garc%C3%ADa-0314642b9/"><i class="bi bi-linkedin"></i></a></li>
