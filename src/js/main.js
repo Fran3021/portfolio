@@ -55,6 +55,19 @@ tsParticles.load("tsparticles", {
     },
 });
 
+  const toggle = document.getElementById('menu-toggle');
+  const menu = document.getElementById('menu-principal');
+  toggle.addEventListener('click', () => {
+    toggle.classList.toggle('active');
+    menu.classList.toggle('active');
+  });
+
+
+const swiper = new Swiper('.swiper', {
+    loop: true,
+    pagination: { el: '.swiper-pagination', clickable: true },
+    navigation: { nextEl: '.swiper-button-next', prevEl: '.swiper-button-prev' },
+  });
 
 //funcion para enviar emails a traves de api de sendgrid
 // document.getElementById('contactForm').addEventListener('submit', async (e) => {

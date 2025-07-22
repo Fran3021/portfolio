@@ -1,14 +1,17 @@
 @use '../abstracts/abstracts' as abs;
 
 
-@keyframes glow {
-    0%, 100% { text-shadow: 0 0 5px abs.$azul-celeste, 0 0 10px abs.$azul-celeste, 0 0 20px abs.$azul-celeste; }
-    50% { text-shadow: 0 0 10px abs.$azul-celeste, 0 0 20px abs.$azul-celeste, 0 0 30px abs.$azul-celeste; }
-  }
+@keyframes fadeIn{
+    from { opacity: 0; transform: translateX(100px);}
+    to { opacity: 1; transform: translateX(0);}
+}
 
-  @keyframes fadeOut {
-    to {
-      opacity: 0;
-      visibility: hidden;
-    }
-  }
+@keyframes typing {
+  from { width: 0; }
+  to { width: 16ch; }
+}
+
+@keyframes blink-cursor {
+  0%, 100% { border-color: abs.$azul-electrico; }
+  50% { border-color: transparent; }
+}

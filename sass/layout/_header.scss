@@ -4,217 +4,280 @@
 
 
 .header-principal{
-    margin-bottom: 40px;
-    padding-top: 70px;
-    @include abs.breakpoint(desktop){
-        padding-top: 140px;
-    }
-    .menu-principal{
-        background-color: abs.$gris-azulado;
-        position: fixed;
-        opacity: 0.8;
-        z-index: 1;
-        top: 0;
+    width: 100%;
+    .menu-movil{
         width: 100%;
-        ul{
-            max-width: 90%;
-            margin-left: auto;
-            margin-right: auto;
+        border-bottom: 1px solid abs.$azul-electrico;
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        padding-left: 5%;
+        padding-right: 5%;
+        padding-top: 15px;
+        padding-bottom: 15px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: abs.$azul-profundo;
+        z-index: 1;
+        .icono-web{
+            text-decoration: none;
+            font-size: 25px;
+            color: abs.$azul-electrico;
+            span{
+                color: abs.$azul-celeste;
+            }
+        }
+        .menu-toggle{
             display: flex;
-            padding-top: 10px;
-            padding-bottom: 10px;
-            justify-content: space-between;
-            @include abs.breakpoint(tablet){
-                width: 100%;
-                max-width: 650px;
-                padding-top: 20px;
-                padding-bottom: 20px;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            width: 40px;
+            height: 40px;
+            background: none;
+            border: none;
+            cursor: pointer;
+            .bar{
+                width: 30px;
+                height: 4px;
+                background: abs.$azul-electrico;
+                margin: 5px 0;
+                border-radius: 2px;
+                transition: 0.4s;
             }
-            @include abs.breakpoint(desktop){
-                width: 100%;
-                max-width: 800px;
-                padding-top: 30px;
-                padding-bottom: 30px;
-            }
-            @include abs.breakpoint(desktopxl){
-                width: 100%;
-                max-width: 900px;
-            }
-            a{
-                text-decoration: none;
-                color: abs.$azul-electrico;
-                font-size: 15px;
-                @include abs.breakpoint(tablet){
-                    font-size: 17px;
+        }
+        .menu-toggle.active{
+            .bar{
+                &:nth-child(1){
+                    transform: rotate(45deg) translate(10px, 5px);
                 }
-                @include abs.breakpoint(desktop){
-                    &:hover{
-                        color: abs.$rosa-neon;
-                        text-shadow: 2px 2px 7px abs.$azul-electrico;
+                &:nth-child(2){
+                    opacity: 0;
+                }
+                &:nth-child(3){
+                    transform: rotate(-45deg) translate(14px, -9px);
+                }
+            }
+        }
+        .menu-principal{
+            position: absolute;
+            width: 100%;
+            top:71px;
+            left: 0;
+            right: 0;
+            display: none;
+            border-bottom: 1px solid abs.$azul-electrico;
+            ul{
+                width: 100%;
+                display: flex;
+                flex-direction: column;
+                gap: 10px;
+                backdrop-filter: blur(10px);
+                padding: 20px 20px;
+                li{
+                    a{
+                        text-decoration: none;
+                        color: abs.$azul-aguamarina;
                     }
                 }
-                @include abs.breakpoint(desktopxl){
-                    font-size: 20px;
+            }
+        }
+        .menu-principal.active{
+            display:flex;
+            animation: fadeIn;
+        }
+        @include abs.breakpoint(desktop){
+            display: none;
+        }
+    }
+    .menu-desktop{
+        display: none;
+        @include abs.breakpoint(desktop){
+            display: flex;
+            width: 100%;
+            border-bottom: 1px solid abs.$azul-electrico;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            padding-left: 5%;
+            padding-right: 5%;
+            padding-top: 15px;
+            padding-bottom: 15px;
+            align-items: center;
+            background-color: abs.$azul-profundo;
+            z-index: 1;
+            .icono-web{
+                width: 20%;
+                text-decoration: none;
+                font-size: 25px;
+                color: abs.$azul-electrico;
+                span{
+                    color: abs.$azul-celeste;
+                }
+            }
+            .menu-principal{
+                margin-left: 100px;
+                width: 80%;
+                ul{
+                    display: flex;
+                    justify-content: space-between;
+                    a{
+                        position: relative;
+                        text-decoration: none;
+                        color: abs.$azul-celeste;
+                        transition: color 0.3s, transform 0.3s;
+                        letter-spacing: 1px;
+                        &::after {
+                            content: "";
+                            position: absolute;
+                            left: 0;
+                            bottom: -5px;
+                            width: 0;
+                            height: 3px;
+                            background: linear-gradient(90deg, abs.$azul-celeste, abs.$rosa-neon);
+                            border-radius: 2px;
+                            transition: width 0.4s cubic-bezier(0.4,0,0.2,1);
+                        }
+                        &:hover {
+                            color: abs.$rosa-neon;
+                            &::after {
+                            width: 100%;
+                            }
+                        }
+                    }
                 }
             }
         }
     }
     .container-header-principal{
-        border-bottom: 1px solid abs.$rosa-neon;
-        padding-bottom: 20px;
-        @include abs.breakpoint(desktop){
-            padding-bottom:  70px;
+        border-bottom: 2px solid abs.$azul-profundo;
+        padding-bottom: 100px;
+        margin-bottom: 50px;
+        margin-top: 200px;
+        @include abs.breakpoint(tablet){
+            margin-top: 300px;
         }
-        .titulo{
-            font-size: 35px;
-            text-align: center;
-            @include abs.breakpoint(desktop){
-                font-size: 45px;
-                margin-bottom: 20px;
-            }
-            @include abs.breakpoint(desktopxl){
-                font-size: 55px;
-            }
+        @include abs.breakpoint(desktopxl){
+            margin-bottom: 200px;
         }
-        h2{
-            font-size: 25px;
-            text-align: center;
-            margin-bottom: 25px;
-            font-weight: bold;
-            @include abs.breakpoint(desktop){
-                font-size: 35px;
-                margin-bottom: 75px;
-                animation: glow 2s infinite linear;
-            }
-            @include abs.breakpoint(desktopxl){
-                font-size: 45px;
-            }
-        }
-        .container-avatar-sobremi{
+        .imagen-socials-curriculum{
             display: flex;
             flex-direction: column;
             justify-content: center;
             align-items: center;
-            gap: 20px;
-            @include abs.breakpoint(desktop){
-                display: grid;
-                grid-template-columns: 0.4fr 1fr;
-                grid-template-rows: 0.5fr 0.5fr;
-                row-gap: 20px;
+            gap: 10px;
+            .imagen-perfil{
+                width: 40%;
+                border-radius: 2%;
+                background-color: abs.$azul-profundo;
+                border: 3px solid abs.$azul-electrico;
             }
-            .avatar{
-                width: 100%;
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                .image-avatar{
-                    width: 150px;
-                    border-radius: 10px;
-                    border: 1px solid abs.$azul-electrico;
-                    @include abs.breakpoint(tablet){
-                        width: 200px;
-                    }
-                    @include abs.breakpoint(desktop){
-                        grid-column: 1 / span 1;
-                        grid-row: 1 / span 1;
-                        width: 100%;
-                    }
+            .name{
+                color: abs.$azul-electrico;
+                font-size: 25px;
+                @include abs.breakpoint(tablet){
+                    font-size: 30px;
+                }
+                @include abs.breakpoint(desktopxl){
+                    font-size: 40px;
                 }
             }
-            .parrafos-sobremi-vista-desktop{
-                display: none;
+            .dev-web{
+                text-align: center;
+                font-size: 20px;
+                color: abs.$azul-celeste;
+                overflow: hidden;
+                border-right: 2px solid abs.$azul-electrico; 
+                white-space: nowrap;           
+                width: 0;                      
+                animation: typing 2.5s steps(22, end) forwards, blink-cursor 0.7s steps(1) infinite;
+                @include abs.breakpoint(tablet){
+                    font-size: 25px;
+                }
+                @include abs.breakpoint(desktopxl){
+                    font-size: 33px;
+                }
+            }
+            h1{
+                font-size: 15px;
+                color: abs.$azul-electrico;
+                text-align: center;
+                @include abs.breakpoint(tablet){
+                    font-size: 20px;
+                }
                 @include abs.breakpoint(desktop){
-                    display: block;
-                    grid-column: 1 / span 2;
-                    grid-row: 2 / span 1;
-                    p{
-                        font-size: 18px;
-                        color: abs.$azul-celeste;
-                        font-weight: 500;
-                        margin-bottom: 20px;
-                        @include abs.breakpoint(desktopxl){
-                            font-size: 22px;
-                        }
-                    }
-                    .redes-sociales{
-                        width: 100%;
-                        ul{
-                            display: flex;
-                            justify-content: space-around;
-                            align-items: center;
-                            a{
-                                text-decoration: none;
-                                color: abs.$azul-electrico;
-                                font-size: 18px;
-                                &:hover{
-                                    color: abs.$blanco;
-                                }
-                                @include abs.breakpoint(desktopxl){
-                                    font-size: 20px;
-                                }
-                            }
-                            i{
-                                color: abs.$azul-electrico;
-                                font-size: 30px;
-                                &:hover{
-                                    color: abs.$blanco;
-                                }
-                            }
-                        }
-                    }
+                    margin-bottom: 25px;
+                }
+                @include abs.breakpoint(desktopxl){
+                    font-size: 25px;
                 }
             }
-            .sobremi{
+            .contacto-curriculum{
                 display: flex;
                 flex-direction: column;
                 justify-content: center;
                 align-items: center;
-                gap: 10px;
-                @include abs.breakpoint(desktop){
-                    grid-column: 2 / span 1;
-                    grid-row: 1 / span 1;
-                    gap: 20px;
+                gap: 15px;
+                @include abs.breakpoint(tablet){
+                    flex-direction: row;
                 }
-                h2{
-                    font-size: 25px;
-                    margin-bottom: 25px;
-                    font-weight: bold;
-                    @include abs.breakpoint(tablet){
-                        display: none;
-                    }
-                }
-                p{
+                .curriculum{
+                    text-decoration: none;
+                    padding: 10px 10px;
+                    background-color: abs.$azul-profundo;
+                    display: inline-block;
+                    border-radius: 10px;
                     font-size: 15px;
-                    color: abs.$azul-celeste;
-                    font-weight: 500;
+                    border: 1px solid abs.$blanco;
+                    color: abs.$rosa-neon;
+                    transition: background 0.5s, color 0.5s;
                     @include abs.breakpoint(desktop){
+                        padding: 10px 20px;
                         font-size: 18px;
-                    }
-                    @include abs.breakpoint(desktopxl){
-                        font-size: 22px;
+                        &:hover{
+                            background-color: abs.$rosa-neon;
+                            color: abs.$azul-profundo;
+                        }
                     }
                 }
-                .parrafos-sobremi-vista-movil{
-                    p{
-                        margin-bottom: 10px;
-                    }
+                .proyectos{
+                    text-decoration: none;
+                    padding: 10px 10px;
+                    background-color: abs.$azul-profundo;
+                    display: inline-block;
+                    border-radius: 10px;
+                    font-size: 15px;
+                    border: 1px solid abs.$blanco;
+                    color: abs.$rosa-neon;
+                    transition: background 0.5s, color 0.5s;
                     @include abs.breakpoint(desktop){
-                        display: none;
+                        padding: 10px 20px;
+                        font-size: 18px;
+                        &:hover{
+                            background-color: abs.$rosa-neon;
+                            color: abs.$azul-profundo;
+                        }
                     }
-                    .redes-sociales{
-                        width: 100%;
-                        ul{
-                            display: flex;
-                            justify-content: space-around;
-                            align-items: center;
-                            a{
-                                text-decoration: none;
-                                color: abs.$azul-electrico;
-                            }
-                            i{
-                                color: abs.$azul-electrico;
-                                font-size: 30px;
-                            }
+                }
+                .contacto{
+                    text-decoration: none;
+                    padding: 10px 10px;
+                    background-color: abs.$azul-profundo;
+                    display: inline-block;
+                    border-radius: 10px;
+                    font-size: 15px;
+                    border: 1px solid abs.$blanco;
+                    color: abs.$rosa-neon;
+                    transition: background 0.5s, color 0.5s;
+                    @include abs.breakpoint(desktop){
+                        padding: 10px 20px;
+                        font-size: 18px;
+                        &:hover{
+                            background-color: abs.$rosa-neon;
+                            color: abs.$azul-profundo;
                         }
                     }
                 }

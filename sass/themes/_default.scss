@@ -2,7 +2,8 @@
 @use '../base/base' as base;
 @use '../components/components' as comp;
 
-body {
+
+html, body {
     overflow-x: hidden;
     background-color: abs.$azul-ocuro;
 }
@@ -11,6 +12,9 @@ html * {
     font-family: abs.$poppins ;
     color: abs.$blanco;
 }
+html {
+  scroll-behavior: smooth;
+}
 
 #tsparticles {
     position: fixed;
@@ -18,7 +22,7 @@ html * {
     left: 0;
     width: 100%;
     height: 100%;
-    z-index: -1;
+    z-index: 0;
   }
 
 h1, h2, h3, h4, h5{

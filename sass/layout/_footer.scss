@@ -3,46 +3,13 @@
 @use '../components/components' as comp;
 
 
-.footer-principal{
-    padding-bottom: 20px;
-    @include abs.breakpoint(desktop){
-        padding-bottom: 40px;
-    }
-    .container-footer-principal{
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        .all-rights{
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            p{
-                font-size: 10px;
-                color: abs.$azul-electrico;
-                @include abs.breakpoint(tablet){
-                    font-size: 15px;
-                }
-                @include abs.breakpoint(desktopxl){
-                    font-size: 20px;
-                }
-            }
-        }
-        ul{
-            display: flex;
-            gap: 30px;
-            @include abs.breakpoint(desktopxl){
-                gap: 50px;
-            }
-            i{
-                color: abs.$azul-electrico;
-                @include abs.breakpoint(desktop){
-                    font-size: 28px;
-                    &:hover{
-                        color: abs.$blanco;
-                    }
-                }
-            }
+.container-footer-principal{
+    padding-bottom: 100px;
+    p{
+        font-size: 15px;
+        color: abs.$azul-aguamarina;
+        @include abs.breakpoint(tablet){
+            font-size: 20px;
         }
     }
 }
