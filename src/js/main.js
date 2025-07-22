@@ -23,7 +23,7 @@ tsParticles.load("tsparticles", {
             image: {
             src: "/src/img/flor-cerezo.webp", 
             width: 20,
-            eight: 20,
+            height: 20,
             },
         },
         opacity: {
@@ -55,12 +55,14 @@ tsParticles.load("tsparticles", {
     },
 });
 
-  const toggle = document.getElementById('menu-toggle');
-  const menu = document.getElementById('menu-principal');
+const toggle = document.getElementById('menu-toggle');
+const menu = document.getElementById('menu-principal');
+if (toggle && menu) {
   toggle.addEventListener('click', () => {
     toggle.classList.toggle('active');
     menu.classList.toggle('active');
   });
+}
 
 
 const swiper = new Swiper('.swiper', {
