@@ -23,10 +23,9 @@ Soy **Francisco García**, desarrollador web Fullstack con experiencia en Python
 ```
 portfolio/
 │
-├── src/
-│   ├── css/           # Hojas de estilos compiladas
+├── public/
 │   ├── img/           # Imágenes y recursos gráficos
-│   ├── js/            # Scripts JavaScript principales
+│   ├── icons/         # Fuentes de la pagina
 │   └── icons/         # Favicons y recursos de iconos
 ├── sass/              # Archivos fuente Sass/SCSS
 ├── index.html         # Página principal del portfolio
@@ -58,9 +57,6 @@ portfolio/
 
 ## 📬 Contacto
 
-¿Te gustaría trabajar conmigo o tienes una propuesta?  
-Puedes contactarme a través del [formulario de la web](https://www.frangarciadev.com/#contacto) o directamente en:
-
 - **Email:** contacto@frangarciadev.com
 - **GitHub:** [Fran3021](https://github.com/Fran3021)
 - **LinkedIn:** [Francisco García](https://www.linkedin.com/in/francisco-garc%C3%ADa-0314642b9/)
@@ -70,7 +66,6 @@ Puedes contactarme a través del [formulario de la web](https://www.frangarciade
 ## 🏆 Proyectos destacados
 
 - **Red Social Stellar Blade:** Red social inspirada en videojuegos, desarrollada con Python/Django.
-- **Simulación de Cafetería:** Web responsive con WordPress y Elementor.
 - **GameBoy Pikachu Edition:** App interactiva con datos de la PokeAPI.
 - **Ahorca Anime:** Juego educativo y visualmente atractivo con JavaScript moderno.
 - **Demo Portfolio:** Plantilla de portfolio con validación de formularios y efectos visuales.
