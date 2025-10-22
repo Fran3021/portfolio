@@ -23,7 +23,7 @@ tsParticles.load("tsparticles", {
         shape: {
             type: "image",
             image: {
-            src: "/img/flor-cerezo.webp", 
+            src: "img/flor-cerezo.webp", 
             width: 20,
             height: 20,
             },
