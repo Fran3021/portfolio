@@ -1,3 +1,5 @@
+import './sass/style.scss'
+
 tsParticles.load("tsparticles", {
     fullScreen: { enable: true },
     interactivity: {
